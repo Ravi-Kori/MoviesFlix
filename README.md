@@ -1,91 +1,134 @@
-🎬 Movies Flix — React Native Mobile App
+# 🎬 Movies Flix — React Native App
 
-Movies Flix is a cross-platform React Native mobile application that allows users to explore the latest movies, discover trending titles, search for any film, and view detailed movie information. The app integrates with TMDB (The Movie Database) API to fetch high-quality movie data such as descriptions, ratings, and images.
+Movies Flix is a modern mobile application built with **React Native** that lets users explore the latest movies, view detailed information, and discover trending titles.  
+The app integrates with **TMDB (The Movie Database)** and uses **Appwrite (BaaS)** to store search history, user data, and saved movies.
 
-The application is powered by Appwrite (BaaS) on the backend, which handles data storage, user authentication, and tracking user activity for generating personalized trends.
+---
 
-🚀 Key Features
-🔥 Trending Movies (Dynamic Ranking)
+## 🚀 Features
 
-The backend tracks how many times each movie is searched by users.
+### 🔍 Search Movies
+- Search any movie using TMDB API  
+- View title, poster, description, and rating
 
-Movies with the highest number of searches appear at the top of the Trending Page.
+### 📈 Trending Page
+- Trending movies update based on **number of searches**
+- Appwrite stores all search queries to rank movies in real time
 
-Real-time updates—no manual curation needed.
+### 📝 Movie Details
+- Overview / description  
+- Rating  
+- Poster  
+- Release date  
 
-🔍 Movie Search
+### 💾 Saved Movies
+- Save movies for later viewing  
+- Synced via Appwrite database
 
-Search any movie using the TMDB API.
+### 👤 Profile Page
+- Manage user profile  
+- Appwrite authentication support
 
-Results include posters, descriptions, and ratings.
+---
 
-Searches are automatically logged into Appwrite to update trending analytics.
+## 🏠 App Screens
+1. **Home Page** – Trending & latest movies  
+2. **Search Page** – Search any movie  
+3. **Saved Movies Page** – Your bookmarked list  
+4. **Profile Page** – Account details
 
-📄 Movie Details Page
+---
 
-View detailed information:
+## 🛠 Tech Stack
 
-Short description
+### Frontend
+- React Native  
+- React Navigation  
+- Axios  
 
-Ratings
+### Backend (BaaS)
+- **Appwrite**  
+  - Authentication  
+  - Database  
+  - Saved movies  
+  - Search tracking  
 
-Release date
+### APIs
+- **TMDB API** for all movie data
 
-Poster image
+---
 
-Fast and responsive using optimized API requests.
+## 📦 Installation & Setup
 
-⭐ Saved Movies
+### 1️⃣ Clone repo
+```bash
+git clone https://github.com/your-username/movies-flix.git
+cd movies-flix
+```
 
-Users can bookmark/save their favorite movies.
+### 2️⃣ Install dependencies
+```bash
+npm install
+```
 
-Saved films are stored securely in Appwrite for easy access later.
+### 3️⃣ Add environment variables  
+Create a `.env` file:
 
-👤 Profile Page
+```
+TMDB_API_KEY=your_tmdb_key
+APPWRITE_ENDPOINT=your_appwrite_endpoint
+APPWRITE_PROJECT_ID=your_project_id
+```
 
-Displays user information.
+### 4️⃣ Start app
+```bash
+npm start
+```
 
-Connected with Appwrite authentication (email/password, OAuth, etc. if implemented).
+Run on Android:
+```bash
+npm run android
+```
 
-📱 App Screens
+Run on iOS:
+```bash
+npm run ios
+```
 
-Home Page (Trending / Latest Movies)
+---
 
-Search Page
+## 📁 Folder Structure
+```
+movies-flix/
+│── src/
+│   ├── components/
+│   ├── screens/
+│   ├── navigation/
+│   ├── services/
+│   ├── hooks/
+│   └── utils/
+│── assets/
+│── .env
+│── package.json
+│── README.md
+```
 
-Saved Movies Page
+---
 
-Profile Page
+## 🧪 Future Enhancements
+- Dark mode  
+- Notifications for new releases  
+- Movie trailers inside app  
+- Better recommendations  
+- UI animations  
 
-🛠️ Tech Stack
-Frontend
+---
 
-React Native
+## 🤝 Contributing
+Contributions are welcome!  
+Open an issue before submitting major changes.
 
-React Navigation
+---
 
-Context API
-
-TMDB API for movie data
-
-Backend (BaaS)
-
-Appwrite
-
-Database (search log, saved movies)
-
-Authentication
-
-Serverless functions (optional)
-
-🌐 How It Works
-
-User searches for a movie → search term is saved to Appwrite.
-
-Appwrite counts number of searches per movie.
-
-Trending page sorts movies based on search frequency.
-
-TMDB API provides movie details and metadata.
-
-Users can save movies, view profiles, and revisit previously liked titles.
+## 📜 License
+Licensed under the **MIT License**.
