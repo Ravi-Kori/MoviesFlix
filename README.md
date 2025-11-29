@@ -1,54 +1,91 @@
-<<<<<<< HEAD
-# Welcome to your Expo app 👋
+🎬 Movies Flix — React Native Mobile App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Movies Flix is a cross-platform React Native mobile application that allows users to explore the latest movies, discover trending titles, search for any film, and view detailed movie information. The app integrates with TMDB (The Movie Database) API to fetch high-quality movie data such as descriptions, ratings, and images.
 
-## Get started
+The application is powered by Appwrite (BaaS) on the backend, which handles data storage, user authentication, and tracking user activity for generating personalized trends.
 
-1. Install dependencies
+🚀 Key Features
+🔥 Trending Movies (Dynamic Ranking)
 
-   ```bash
-   npm install
-   ```
+The backend tracks how many times each movie is searched by users.
 
-2. Start the app
+Movies with the highest number of searches appear at the top of the Trending Page.
 
-   ```bash
-   npx expo start
-   ```
+Real-time updates—no manual curation needed.
 
-In the output, you'll find options to open the app in a
+🔍 Movie Search
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Search any movie using the TMDB API.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Results include posters, descriptions, and ratings.
 
-## Get a fresh project
+Searches are automatically logged into Appwrite to update trending analytics.
 
-When you're ready, run:
+📄 Movie Details Page
 
-```bash
-npm run reset-project
-```
+View detailed information:
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Short description
 
-## Learn more
+Ratings
 
-To learn more about developing your project with Expo, look at the following resources:
+Release date
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Poster image
 
-## Join the community
+Fast and responsive using optimized API requests.
 
-Join our community of developers creating universal apps.
+⭐ Saved Movies
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-=======
-# MoviesFlix
->>>>>>> 05b31fc51a2e03edbd7bb882ffef0e3212101fa1
+Users can bookmark/save their favorite movies.
+
+Saved films are stored securely in Appwrite for easy access later.
+
+👤 Profile Page
+
+Displays user information.
+
+Connected with Appwrite authentication (email/password, OAuth, etc. if implemented).
+
+📱 App Screens
+
+Home Page (Trending / Latest Movies)
+
+Search Page
+
+Saved Movies Page
+
+Profile Page
+
+🛠️ Tech Stack
+Frontend
+
+React Native
+
+React Navigation
+
+Context API
+
+TMDB API for movie data
+
+Backend (BaaS)
+
+Appwrite
+
+Database (search log, saved movies)
+
+Authentication
+
+Serverless functions (optional)
+
+🌐 How It Works
+
+User searches for a movie → search term is saved to Appwrite.
+
+Appwrite counts number of searches per movie.
+
+Trending page sorts movies based on search frequency.
+
+TMDB API provides movie details and metadata.
+
+Users can save movies, view profiles, and revisit previously liked titles.
