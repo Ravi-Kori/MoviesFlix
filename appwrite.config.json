@@ -1,0 +1,95 @@
+{
+    "projectId": "68cafcdc001aabf2fa63",
+    "endpoint": "https://fra.cloud.appwrite.io/v1",
+    "projectName": "react_native_movie_app",
+    "settings": {
+        "services": {
+            "account": true,
+            "avatars": true,
+            "databases": true,
+            "locale": true,
+            "health": true,
+            "storage": true,
+            "teams": true,
+            "users": true,
+            "sites": true,
+            "functions": true,
+            "graphql": true,
+            "messaging": true
+        },
+        "auth": {
+            "methods": {
+                "jwt": true,
+                "phone": true,
+                "invites": true,
+                "anonymous": true,
+                "email-otp": true,
+                "magic-url": true,
+                "email-password": true
+            },
+            "security": {
+                "duration": 31536000,
+                "limit": 0,
+                "sessionsLimit": 10,
+                "passwordHistory": 0,
+                "passwordDictionary": false,
+                "personalDataCheck": false,
+                "sessionAlerts": false,
+                "mockNumbers": []
+            }
+        }
+    },
+    "tablesDB": [
+        {
+            "$id": "68cd16eb0007ae4ca170",
+            "name": "movies",
+            "enabled": true
+        }
+    ],
+    "databases": [
+        {
+            "$id": "movies2",
+            "name": "movies2",
+            "enabled": true
+        },
+        {
+            "$id": "movies3",
+            "name": "movies3",
+            "enabled": true
+        },
+        {
+            "$id": "movies",
+            "name": "movies",
+            "enabled": true
+        }
+    ],
+    "collections": [
+        {
+            "$id": "metrics",
+            "databaseId": "movies2",
+            "name": "metrics",
+            "documentSecurity": true,
+            "attributes": [],
+            "indexes": [],
+            "enabled": true
+        },
+        {
+            "$id": "cln",
+            "databaseId": "movies3",
+            "name": "cln",
+            "documentSecurity": false,
+            "attributes": [],
+            "indexes": [],
+            "enabled": true
+        },
+        {
+            "$id": "mycln",
+            "databaseId": "movies",
+            "name": "mycln",
+            "documentSecurity": false,
+            "attributes": [],
+            "indexes": [],
+            "enabled": true
+        }
+    ]
+}
